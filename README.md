@@ -16,7 +16,8 @@ Plugin Homepage: [Keybase.io WordPress Plugin](https://github.com/Jamesits/wp-ke
 * Add your keybase.txt file without needing FTP/SSH to upload and download files.
 
 ## Screenshots
-1. screenshot-1.png: The keybase.txt text editor
+
+![Editor](https://github.com/Jamesits/wp-keybase-verification/raw/master/screenshot-1.png)
 
 ## Installation
 
