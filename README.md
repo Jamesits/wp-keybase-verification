@@ -22,7 +22,7 @@ Plugin Homepage: [Keybase.io WordPress Plugin](https://github.com/Jamesits/wp-ke
 ## Installation
 
 ### Download and Upload:
-1. Download the plugin files.
+1. Download .zip code from [the latest release](https://github.com/Jamesits/wp-keybase-verification/releases).
 2. Upload the plugin's folder to the "/wp-content/plugins/" directory
 3. Activate the plugin through the "Plugins" menu in WordPress
 4. Select "Settings"
