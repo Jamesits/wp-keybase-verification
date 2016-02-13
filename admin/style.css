@@ -1,0 +1,50 @@
+/* Admin Interface */
+#keybaseverif_admin{
+	border: 			0 solid #000000;
+	width: 				800px;
+}
+#keybaseverif_message{
+	background-color: 	#ffffff;
+	border: 			1px solid #55B05A;
+	color: 				#55B05A;
+	font-size: 			12px/14px;
+	margin: 			0px 0px 10px 0px;
+	padding: 			10px;
+	width: 				100%;
+}
+#keybaseverif_text_field{
+	min-height: 		1325px;
+	min-width: 			100%;
+}
+#keybaseverif_admin .setting-description{
+	margin: 			0px 0px 10px 0px;
+	width: 				540px;
+}
+#keybaseverif_admin select{
+	margin: 			10px 0px 0px 0px;
+}
+#keybaseverif_form{
+	border: 			0px solid #55B05A;
+	float: 				left;
+	width: 				100%;
+}
+
+/* Submenu */
+#keybaseverif_admin_submenu{
+	border-bottom: 		1px solid #cccccc;
+	height: 			25px;
+	margin: 			10px 0px 20px 0px;
+	width: 				540px;
+}
+#keybaseverif_admin_submenu li{
+	color: 				#cccccc;
+	float: 				left;
+	margin: 			0px 0px 0px 0px;
+}
+#keybaseverif_admin_submenu li a{
+	padding: 			0px 10px 0px 10px;
+	text-decoration: 	none;
+}
+#keybaseverif_admin_submenu li a.current{
+	text-decoration: 	underline;
+}
