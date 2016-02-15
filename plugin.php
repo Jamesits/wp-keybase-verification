@@ -13,17 +13,6 @@ Domain Path: /lang
 /*
 Copyright 2016  James Swineson (@jamesits) <jamesswineson@gmail.com>
 Copyright 2011  Hans Vedo  (email : hans@cultivate.it)
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -42,7 +31,7 @@ function keybaseverif_install(){
 		$keybaseverif_text = stripslashes(get_option('keybaseverif_text'));
 	}else{
 		// 3rd: Lastly just load the template contents.
-		$keybaseverif_text = file_get_contents(ABSPATH.'wp-content/plugins/wp-keybase-verification/template.txt');
+		$keybaseverif_text = "// paste your keybase.txt content here\n";
 	}
 
 	// Save the default keybase.txt

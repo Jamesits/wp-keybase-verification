@@ -10,7 +10,7 @@ if(!defined('ABSPATH')){
 	<h2>keybase.txt</h2>
 
 	<div class="clear setting-description">
-		<p>Paste your keybase.txt content here. For more information please refer to <a href="https://keybase.io">Keybase.io</a>.</p>
+		<p><?php echo(__('Paste your keybase.txt content here. For more information please refer to <a href="https://keybase.io">Keybase.io</a>.','keybaseverif')); ?></p>
 	</div>
 
 	<?php if(isset($keybaseverif_message) and $keybaseverif_message != ''){ ?>

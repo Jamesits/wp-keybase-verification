@@ -32,12 +32,12 @@ if(file_exists(ABSPATH.'keybase.txt')){
 	$keybaseverif_text = stripslashes(get_option('keybaseverif_text'));
 }else{
 	// 3rd: Lastly just load the template contents.
-	$keybaseverif_text = file_get_contents(ABSPATH.'wp-content/plugins/wp-keybase-verification/template.txt');
+	$keybaseverif_text = "// paste your keybase.txt content here\n";
 }
 
 // Warnings
 if(file_exists(ABSPATH.'keybase.txt')){
-	$keybaseverif_message = __('A keybase.txt file already exists. Please rename it to humans-backup.txt and then use this plugin normally.','keybaseverif');
+	$keybaseverif_message = __('A keybase.txt file already exists. Please remove and then use this plugin normally.','keybaseverif');
 	$enable_form = false;
 }
 
@@ -69,28 +69,5 @@ if(count($timezone_string_parts) >= 2){
 	$sites_timezone = str_replace('_',' ',$sites_timezone);
 }else{
 	$sites_timezone = '';
-}
-
-// Get the selected language.
-if(get_option('keybaseverif_lang') != ''){
-	$selected_language = get_option('keybaseverif_lang');
-
-	switch($selected_language){
-		case 'de_DE':
-			$selected_language = 'Deutsch';
-		break;
-		case 'auto':
-		case 'en_US':
-			$selected_language = 'English';
-		break;
-		case 'es_ES':
-			$selected_language = 'Espanol';
-		break;
-		case 'nb_NO':
-			$selected_language = 'Norsk';
-		break;
-	}
-}else{
-	$selected_language = 'English';
 }
 ?>
