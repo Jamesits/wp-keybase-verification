@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Keybase.io Verification
-Version: 1.3
+Version: 1.4
 Plugin URI: https://github.com/Jamesits/wp-keybase-verification
 Description: Keybase.io site verification helper.
 Author: James Swineson
@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // Settings
-define('keybaseverif_version','1.3');
+define('keybaseverif_version','1.4');
 
 // Install the plugin
 register_activation_hook(__FILE__,'keybaseverif_install');
@@ -76,14 +76,6 @@ function keybaseverif_settings_page(){
 				include(dirname(__FILE__).'/admin/code/write.php');
 				include(dirname(__FILE__).'/admin/html/write.php');
 			break;
-			case 'resources':
-				include(dirname(__FILE__).'/admin/code/resources.php');
-				include(dirname(__FILE__).'/admin/html/resources.php');
-			break;
-			case 'settings':
-				include(dirname(__FILE__).'/admin/code/settings.php');
-				include(dirname(__FILE__).'/admin/html/settings.php');
-			break;
 		}
 
 		$plugin_output = ob_get_contents();
@@ -93,33 +85,6 @@ function keybaseverif_settings_page(){
 	$plugin_output = str_replace('{keybaseverif.text}',$keybaseverif_text,$plugin_output);
 	$plugin_output = str_replace('{page}',$_GET['page'],$plugin_output);
 	echo($plugin_output);
-}
-
-// Language
-add_action('init','load_keybaseverif_language');
-function load_keybaseverif_language(){
-	// Save the language settings.
-	if(isset($_POST['keybaseverif_lang'])){
-		// Save the content.
-		update_option('keybaseverif_lang',$_POST['keybaseverif_lang']);
-	}
-
-	// Check if a language file exists for Wordpress' regional settings.
-	if(get_option('keybaseverif_lang') == 'auto'){
-		$locale = get_locale();
-
-		if(file_exists(dirname(__FILE__).'/lang/'.$locale.'.mo')){
-			load_textdomain('keybaseverif',dirname(__FILE__).'/lang/'.$locale.'.mo');
-		}
-	}else{
-		// Look for a language file in the plugin directory.
-		if(file_exists(dirname(__FILE__).'/lang/'.get_option('keybaseverif_lang').'.mo')){
-			load_textdomain('keybaseverif',dirname(__FILE__).'/lang/'.get_option('keybaseverif_lang').'.mo');
-		}else if(file_exists(WP_CONTENT_DIR.'/keybaseverif/lang/'.get_option('keybaseverif_lang').'.mo')){
-			// Look for a language file in the content directory.
-			load_textdomain('keybaseverif',WP_CONTENT_DIR.'/keybaseverif/lang/'.get_option('keybaseverif_lang').'.mo');
-		}
-	}
 }
 
 // Add the settings link on the plugin page
@@ -132,12 +97,15 @@ function keybaseverif_settings_link($links) {
 }
 
 // Admin HEAD
-add_action('admin_head','keybaseverif_admin_head');
-function keybaseverif_admin_head(){
-	echo('<link href="'.get_bloginfo('url').'/wp-content/plugins/wp-keybase-verification/admin/style.css?'.keybaseverif_version.'" rel="stylesheet" type="text/css" />');
-	echo('<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/wp-keybase-verification/thirdparty/jquery.elastic.js?'.keybaseverif_version.'"></script>');
-	echo('<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/wp-keybase-verification/thirdparty/jquery.textarea.js?'.keybaseverif_version.'"></script>');
-	echo('<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/wp-keybase-verification/admin/functions.js?'.keybaseverif_version.'"></script>');
+add_action('admin_enqueue_scripts','keybaseverif_admin_head');
+function keybaseverif_admin_head($hook, $hook_suffix){
+	if ( 'options-general.php' != $hook && 'wp-keybase-verification' != $hook_suffix ) {
+        return;
+    }
+	wp_enqueue_style ( 'keybaseverif-style', plugin_dir_url( __FILE__ ) . 'admin/style.css', array(), keybaseverif_version);
+	wp_enqueue_script( 'keybaseverif-jquery-elastic', plugin_dir_url( __FILE__ ) . 'thirdparty/jquery.elastic.js', array('jquery'), keybaseverif_version );
+	wp_enqueue_script( 'keybaseverif-jquery-textarea', plugin_dir_url( __FILE__ ) . 'thirdparty/jquery.textarea.js', array('jquery'), keybaseverif_version );
+	wp_enqueue_script( 'keybaseverif-functions', plugin_dir_url( __FILE__ ) . 'admin/functions.js', array('keybaseverif-jquery-elastic', 'keybaseverif-jquery-textarea'), keybaseverif_version );
 }
 
 // This allows keybase.txt content to be served even if the file doesn't exist.

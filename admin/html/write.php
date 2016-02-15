@@ -8,10 +8,9 @@ if(!defined('ABSPATH')){
 <div class="wrap" id="keybaseverif_admin">
 	<div id="icon-options-general" class="icon32"><br /></div>
 	<h2>keybase.txt</h2>
-	<?php include(dirname(__FILE__).'/submenu.php'); ?>
 
 	<div class="clear setting-description">
-		<p><?php echo(__('Paste your keybase.txt content here.','keybaseverif')); ?></p>
+		<p>Paste your keybase.txt content here. For more information please refer to <a href="https://keybase.io">Keybase.io</a>.</p>
 	</div>
 
 	<?php if(isset($keybaseverif_message) and $keybaseverif_message != ''){ ?>
