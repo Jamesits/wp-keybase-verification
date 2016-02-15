@@ -91,7 +91,7 @@ function keybaseverif_settings_page(){
 $plugin = plugin_basename(__FILE__);
 add_filter('plugin_action_links_'.$plugin,'keybaseverif_settings_link');
 function keybaseverif_settings_link($links) {
-	$settings_link = '<a href="options-general.php?page=wp-keybase-verification">Settings</a>';
+	$settings_link = '<a href="options-general.php?page=wp-keybase-verification">keybase.txt</a>';
 	array_unshift($links,$settings_link);
 	return($links);
 }
