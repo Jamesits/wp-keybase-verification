@@ -99,6 +99,11 @@ function keybaseverif_settings_link($links) {
 // Admin HEAD
 add_action('admin_enqueue_scripts','keybaseverif_admin_head');
 function keybaseverif_admin_head($hook, $hook_suffix){
+	echo "<!-- keybase";
+	var_dump($hook);
+	echo "\n-------\n";
+	var_dump($hook_suffix);
+	echo "-->";
 	if ( 'options-general.php' != $hook && 'wp-keybase-verification' != $hook_suffix ) {
         return;
     }
