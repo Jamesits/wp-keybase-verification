@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Keybase.io Verification
-Version: 1.4.2
+Version: 1.4.3
 Plugin URI: https://github.com/Jamesits/wp-keybase-verification
 Description: Keybase.io site verification helper.
 Author: James Swineson
@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 // Settings
-define('keybaseverif_version', '1.4.2');
+define('keybaseverif_version', '1.4.3');
 
 // Install the plugin
 register_activation_hook(__FILE__, 'keybaseverif_install');

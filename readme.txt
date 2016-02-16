@@ -3,7 +3,7 @@ Contributors: jamesits, hansvedo
 Tags: keybase, keybase.io, verification
 Requires at least: 4.0.0
 Tested up to: 4.4.2
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 
 A plugin to create a keybase.txt (Keybase.io Verification) file that credits the developers and designers of a website.
 
