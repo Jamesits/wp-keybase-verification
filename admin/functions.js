@@ -7,5 +7,5 @@ jQuery(document).ready(function() {
   jQuery('#keybaseverif_text_field').elastic();
 
   // Hide any messages after a couple seconds.
-  jQuery('#keybaseverif_message').delay(2000).fadeOut();
+  jQuery('#keybaseverif_message').delay(10000).fadeOut();
 })
