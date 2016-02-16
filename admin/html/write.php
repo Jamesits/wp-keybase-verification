@@ -1,7 +1,7 @@
 <?php
 // Security: Ensure the file is accessed by Wordpress.
-if(!defined('ABSPATH')){
-	return;
+if (!defined('ABSPATH')) {
+    return;
 }
 ?>
 
@@ -10,14 +10,18 @@ if(!defined('ABSPATH')){
 	<h2>keybase.txt</h2>
 
 	<div class="clear setting-description">
-		<p><?php echo(__('Paste your keybase.txt content here. For more information please refer to <a href="https://keybase.io">Keybase.io</a>.','keybaseverif')); ?></p>
+		<p><?php echo __('Paste your keybase.txt content here. For more information please refer to <a href="https://keybase.io">Keybase.io</a>.', 'keybaseverif'); ?></p>
 	</div>
 
-	<?php if(isset($keybaseverif_message) and $keybaseverif_message != ''){ ?>
-		<div id="keybaseverif_message"><?php echo($keybaseverif_message); ?></div>
-	<?php } ?>
+	<?php if (isset($keybaseverif_message) and $keybaseverif_message != '') {
+    ?>
+		<div id="keybaseverif_message"><?php echo $keybaseverif_message;
+    ?></div>
+	<?php
+} ?>
 
-	<?php if($enable_form == true){ ?>
+	<?php if ($enable_form == true) {
+    ?>
 		<div id="keybaseverif_form">
 			<form name="keybaseverif-form" action="options-general.php?page={page}" method="post">
 
@@ -26,9 +30,12 @@ if(!defined('ABSPATH')){
 				</div>
 
 				<p class="submit">
-					<input type="submit" name="submit" class="button-primary" value="<?php echo(__('Save Changes','keybaseverif')); ?>" /> or view your <a href="<?php get_bloginfo('url'); ?>/keybase.txt" target="_blank">keybase.txt</a>
+					<input type="submit" name="submit" class="button-primary" value="<?php echo __('Save Changes', 'keybaseverif');
+    ?>" /> or view your <a href="<?php get_bloginfo('url');
+    ?>/keybase.txt" target="_blank">keybase.txt</a>
 				</p>
 			</form>
 		</div>
-	<?php } ?>
+	<?php
+} ?>
 </div>
