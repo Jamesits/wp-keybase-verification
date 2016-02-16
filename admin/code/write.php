@@ -18,7 +18,7 @@ $enable_form = true;
 // Capture a submitted form.
 if(isset($_POST['keybaseverif_text'])){
 	// Save the content.
-	update_option('keybaseverif_text',$_POST['keybaseverif_text']);
+	update_option('keybaseverif_text', sanitize_text_field($_POST['keybaseverif_text']));
 
 	// Return a message
 	$keybaseverif_message = __('Your keybase.txt file has been updated!','keybaseverif').' <a href="'.get_bloginfo('url').'/keybase.txt">keybase.txt</a>';
@@ -39,35 +39,5 @@ if(file_exists(ABSPATH.'keybase.txt')){
 if(file_exists(ABSPATH.'keybase.txt')){
 	$keybaseverif_message = __('A keybase.txt file already exists. Please remove and then use this plugin normally.','keybaseverif');
 	$enable_form = false;
-}
-
-// Get the current theme developer.
-$current_theme = get_current_theme();
-$all_themes = get_themes();
-foreach($all_themes as $theme){
-	if($theme['Name'] == $current_theme){
-		$theme_details = $theme;
-		break;
-	}
-}
-
-// Select the users.
-$all_users = $wpdb->get_results("
-	SELECT *
-	FROM ".$wpdb->prefix."users
-	ORDER BY display_name ASC
-");
-//var_dump($all_users);
-
-// Get the timezone city.
-$timezone_string = get_option('timezone_string');
-$timezone_string_parts = explode('/',$timezone_string);
-if(count($timezone_string_parts) >= 2){
-	$sites_timezone = $timezone_string_parts[(count($timezone_string_parts)-1)];
-
-	// Underscores added to the DB.
-	$sites_timezone = str_replace('_',' ',$sites_timezone);
-}else{
-	$sites_timezone = '';
 }
 ?>

@@ -1,14 +1,11 @@
 # wp-keybase-verification
-
 A plugin to create a keybase.txt (Keybase.io Verification) file that credits the developers and designers of a website.
 
 ## Disclaimer
-
-This plugin and it's developer has no relationship with Keybase.io .
+This plugin and it's developer has no relationship with [keybase.io](https://keybase.io).
 
 ## Description
-
-This plugin enables you to verify your site through [keybase.io](https://keybase.io).
+This plugin enables you to verify your site through [keybase.io](https://keybase.io). Only works while WordPress is installed to root directory, otherwise you need to set up your server to let WordPress handle `your.domain/keybase.txt`.
 
 Plugin Homepage: [Keybase.io WordPress Plugin](https://github.com/Jamesits/wp-keybase-verification)
 
@@ -16,7 +13,6 @@ Plugin Homepage: [Keybase.io WordPress Plugin](https://github.com/Jamesits/wp-ke
 * Add your keybase.txt file without needing FTP/SSH to upload and download files.
 
 ## Screenshots
-
 ![Editor](https://github.com/Jamesits/wp-keybase-verification/raw/master/screenshot-1.png)
 
 ## Installation
@@ -28,6 +24,10 @@ Plugin Homepage: [Keybase.io WordPress Plugin](https://github.com/Jamesits/wp-ke
 4. Select "Settings"
 
 ## Changelog
+
+### 1.4
+* Removed unused code.
+* Changes to meet WordPress plugin submission requirements.
 
 ### 1.3
 * Published
