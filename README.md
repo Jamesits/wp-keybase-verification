@@ -7,6 +7,7 @@ This plugin and it's developer has no relationship with [keybase.io](https://key
 ## Description
 This plugin enables you to verify your site through [keybase.io](https://keybase.io). Only works while WordPress is installed to root directory, otherwise you need to set up your server to let WordPress handle `your.domain/keybase.txt`.
 
+ * [Download from WordPress Plugin Directory](https://wordpress.org/plugins/wp-keybase-verification/)
  * [Github repository](https://github.com/Jamesits/wp-keybase-verification)
  * [WordPress Plugin Directory SVN repository](https://plugins.svn.wordpress.org/wp-keybase-verification/)
 
