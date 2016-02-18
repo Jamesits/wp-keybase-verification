@@ -43,7 +43,6 @@ This is a derived work of [Humans.txt plugin](https://wordpress.org/plugins/huma
 
 ```
 Copyright 2016  James Swineson (@jamesits) <jamesswineson@gmail.com>
-Copyright 2011  Hans Vedo  (email : hans@cultivate.it)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

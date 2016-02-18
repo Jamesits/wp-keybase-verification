@@ -3,7 +3,7 @@ Contributors: jamesits
 Tags: keybase, keybase.io, verification
 Requires at least: 4.0.0
 Tested up to: 4.4.2
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 License: GPLv3 or later
 
 A plugin to create a keybase.txt (Keybase.io Verification) file, which would verify your possession of this website on Keybase.io.
@@ -40,6 +40,9 @@ Keybase.io requires a `your.domain/keybase.txt` or `your.domain/.well-known/keyb
 
 == Changelog ==
 
+= 1.4.5 =
+* Fix bug: you don't have permission to view this page.
+
 = 1.4.4 =
 * Modify documentation
 
@@ -53,4 +56,4 @@ Keybase.io requires a `your.domain/keybase.txt` or `your.domain/.well-known/keyb
 == Upgrade Notice ==
 
 = 1.4.4 =
-More detailed documentation.
+Serious usability bug fix.
