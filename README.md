@@ -27,6 +27,9 @@ This plugin enables you to verify your site through [keybase.io](https://keybase
 
 ## Changelog
 
+### 1.4.4
+* Modify documentation
+
 ### 1.4
 * Removed unused code.
 * Changes to meet WordPress plugin submission requirements.
