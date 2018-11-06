@@ -2,7 +2,7 @@
 A plugin to create a keybase.txt (Keybase.io Verification) file, which would verify your possession of this website on [Keybase.io](keybase.io).
 
 ## Disclaimer
-This plugin and it's developer has no relationship with [keybase.io](https://keybase.io).
+This plugin and its developer has no relationship with [keybase.io](https://keybase.io).
 
 ## Description
 This plugin enables you to verify your site through [keybase.io](https://keybase.io). Only works while WordPress is installed to root directory, otherwise you need to set up your server to let WordPress handle `your.domain/keybase.txt`.
@@ -20,7 +20,7 @@ This plugin enables you to verify your site through [keybase.io](https://keybase
 ## Installation
 
 ### Download and Upload:
-1. Download .zip code from [the latest release](https://github.com/Jamesits/wp-keybase-verification/releases).
+1. Download .zip code from [the latest release](https://github.com/Jamesits/wp-keybase-verification/releases)
 2. Upload the plugin's folder to the "/wp-content/plugins/" directory
 3. Activate the plugin through the "Plugins" menu in WordPress
 4. Select "Settings"
