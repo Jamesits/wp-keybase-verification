@@ -2,7 +2,7 @@
 Contributors: jamesits
 Tags: keybase, keybase.io, verification
 Requires at least: 4.0.0
-Tested up to: 4.4.2
+Tested up to: 4.9.8
 Stable tag: 1.4.5
 License: GPLv3 or later
 
