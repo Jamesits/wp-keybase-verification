@@ -3,7 +3,7 @@
 Title: Write
 Description: The code for the write page.
 Author: Hans Vedo, hans@cultivate.it
-Author: James Swineson, jamesswineson@gmail.com
+Author: Jamesits, osscontrib@ciexyz.net
 2011-01-23: Created
 */
 
@@ -49,6 +49,8 @@ $enable_form = true;
 
 // Capture a submitted form.
 if (isset($_POST['keybaseverif_text'])) {
+    check_admin_referer('keybaseverif_save', 'keybaseverif_nonce');
+
     // Save the content.
     update_option('keybaseverif_text', sanitize_multiline_text_field($_POST['keybaseverif_text']));
 

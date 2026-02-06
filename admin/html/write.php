@@ -24,6 +24,7 @@ if (!defined('ABSPATH')) {
     ?>
 		<div id="keybaseverif_form">
 			<form name="keybaseverif-form" action="options-general.php?page={page}" method="post">
+				<?php wp_nonce_field('keybaseverif_save', 'keybaseverif_nonce'); ?>
 
 				<div id="poststuff">
 					<textarea id="keybaseverif_text_field" name="keybaseverif_text" wrap="off">{keybaseverif.text}</textarea>
